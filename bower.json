@@ -1,0 +1,16 @@
+{
+  "lib": {
+    "name": "Periop v6",
+    "version": "0.0.1",
+    "dependencies": {
+    
+    }
+  },
+  "vendor": {
+    "name": "periop v6",
+    "version": "0.0.1",
+    "dependencies": {
+     
+    }
+  }
+}

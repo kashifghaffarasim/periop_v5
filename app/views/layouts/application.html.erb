@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+
+  <head>
+    <title>PeriopV5</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+    <%= javascript_pack_tag 'application' %>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+
+  </head>
+
+  <body ng-app="periop">
+    <div class="container"> 
+      <div ui-view> </div>
+    </div>
+    <br />
+  </body>
+
+</html>

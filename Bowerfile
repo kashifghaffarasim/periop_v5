@@ -1,0 +1,8 @@
+asset "angular"
+asset "angular-bootstrap"
+asset "ui-router"
+asset "angular-loading-bar"
+asset "angulartics"
+
+
+
