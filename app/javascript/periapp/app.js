@@ -13,7 +13,29 @@ periop.config(["$provide", function ($provide) {
         $provide.value("$locationRoot", "localhost:3001");
 }]);
 
-periop.states = {}
+
+periop.factory("QuestionService", function ($http, $q, $apiRoot) {
+
+        var resourcePath = $apiRoot;
+        return {
+            list: function () {
+                var url = resourcePath + "/questions";
+                var defer = $q.defer();
+                $http({
+                    method: 'GET',
+                    url: url
+    
+                }).then(function (data, status, header, config) {
+                    defer.resolve(data);
+                }).then(function (data, status, header, config) {
+                    defer.reject(data);
+                });
+                return defer.promise;
+            },
+           
+        };
+    
+});
 
 periop.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
         
@@ -30,7 +52,30 @@ periop.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $loca
                     url: '/',
                     templateUrl: require('./templates/_welcome.html'),
                     controller: 'HomeCtrl',
-        })
+                    resolve: {
+                                list: function (QuestionService) {
+                                        return QuestionService.list();
+                                },
+                        }   
+                })
+                .state('assetments', {
+                        url: '/assessment/:code',
+                        templateUrl: require('./templates/_assesment.html'),
+                        controller: 'AssetmentCtrl',
+                })
+                .state('thank-you', {
+                        url: '/thank-you',
+                        templateUrl: require('./templates/_welcome.html'),
+                        controller: 'HomeCtrl',
+                })
+                .state('hq', {
+                        url: '/hq',
+                        templateUrl: require('./templates/_welcome.html'),
+                        controller: 'HomeCtrl',
+                })
+
     
  });
 
+
+ 

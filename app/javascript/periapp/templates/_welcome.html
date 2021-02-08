@@ -8,12 +8,13 @@
 
           <p class="lead mt-5">
             This questionnaire helps Dr David Belavy plan for your care.
+            {{ currentQuestion.code }}
           </p>
           <p class="lead">
             Please complete a confidential health assessment for your anaesthetist.
           </p>
           <br > 
-          <a class="btn btn-primary btn-lg" ui-sref="assessment.question({code: assessment.currentQuestion().code})" href="/assessment/">
+          <a class="btn btn-primary btn-lg" ng-click="get_assesment(currentQuestion.code)">
             Fill in assessment
           </a>
 

@@ -10,9 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/hq' => 'home#hq'
-  get '/*path' => 'home#index', constraints: {format: 'html', path: /(?!assets|fonts|favicon\.ico).+/}
-
+  get '/*path' => 'welcome#index', constraints: {format: 'html', path: /(?!assets|fonts|favicon\.ico).+/}
   resources :welcome
   root 'welcome#index'
 

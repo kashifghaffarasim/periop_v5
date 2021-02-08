@@ -1,11 +1,10 @@
 
-angular.module('periop').controller('HomeCtrl', function($scope, $rootScope, $state, list) {
+angular.module('periop').controller('AssetmentCtrl', function($scope, $rootScope, $state) {
     "use strict";
 
     $scope.initialize = function () {
         $scope.count  = 1
-        console.log(list)
-        $scope.currentQuestion = list.data[0]
+       console.log('updated')
     };
     
     $scope.initialize();
