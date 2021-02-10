@@ -11,7 +11,8 @@ angular.module('periop').controller('HomeCtrl', function($scope, $rootScope, $st
     $scope.initialize();
 
     $scope.get_assesment = function(code){
-        $state.go('assetments', {'code': code})
+        console.log('here we are now')
+        $state.go('assesments', {'code': code})
     }
     
 });

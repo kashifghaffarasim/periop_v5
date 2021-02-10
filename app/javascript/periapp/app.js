@@ -58,15 +58,20 @@ periop.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $loca
                                 },
                         }   
                 })
-                .state('assetments', {
+                .state('assesments', {
                         url: '/assessment/:code',
                         templateUrl: require('./templates/_assesment.html'),
-                        controller: 'AssetmentCtrl',
+                        controller: 'AssesmentCtrl',
+                        resolve: {
+                                list: function (QuestionService) {
+                                        return QuestionService.list();
+                                },
+                        }   
                 })
                 .state('thank-you', {
                         url: '/thank-you',
-                        templateUrl: require('./templates/_welcome.html'),
-                        controller: 'HomeCtrl',
+                        templateUrl: require('./templates/_thankyou.html'),
+                        controller: 'ThankYouCtrl',
                 })
                 .state('hq', {
                         url: '/hq',
