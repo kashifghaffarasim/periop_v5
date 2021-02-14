@@ -30,7 +30,7 @@ gem 'angular-ui-bootstrap-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "active_model_serializers", require: true
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor'
 gem 'newrelic_rpm'
 
 group :development, :test do

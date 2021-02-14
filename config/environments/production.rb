@@ -22,8 +22,6 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # config.public_file_server.enabled  = true 
-
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
