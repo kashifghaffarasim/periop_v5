@@ -28,8 +28,10 @@ gem 'angular-ui-bootstrap-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
 gem "active_model_serializers", require: true
+
+gem 'rails_12factor', group: :production
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -10,13 +10,12 @@ require("channels")
 
 require("jquery")
 require("angular")
-
 require("angular-bootstrap")
 require("angular-ui-bootstrap")
 require("angular-ui-router")
 require("angular-route")
 require("angular-loading-bar")
-// require("checklist-model")
+
 require("underscore")
 require("lodash")
 
